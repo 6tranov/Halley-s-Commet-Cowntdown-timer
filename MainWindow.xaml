@@ -7,16 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="210" Width="790" ResizeMode="NoResize">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="17*"/>
-            <ColumnDefinition Width="7*"/>
-        </Grid.ColumnDefinitions>
-        <Label x:Name="CurrentTimeLabel" Margin="300,0,0,0" HorizontalAlignment="Left" Width="480" Height="60" VerticalAlignment="Top" Grid.ColumnSpan="2" FontSize="36"/>
-        <Label x:Name="AppearDateLabel" Content="The next date to appear" Margin="300,60,0,0" HorizontalAlignment="Left" Width="480" Height="60" VerticalAlignment="Top" Grid.ColumnSpan="2" FontSize="36"/>
-        <Label x:Name="CurrentTimeLabel1" Content="現在時刻" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="300" Height="60" FontSize="36"/>
-        <Label x:Name="AppearDateLabel1" Content="次回の近日点予測" HorizontalAlignment="Left" Margin="0,60,0,0" VerticalAlignment="Top" Width="300" Height="60" FontSize="36"/>
-        <Label x:Name="TimeSpanLabel1" Content="予測日まであと" HorizontalAlignment="Left" Margin="0,120,0,0" Width="300" Height="60" VerticalAlignment="Top" FontSize="36"/>
-        <Label x:Name="TimeSpanLabel" Content="" HorizontalAlignment="Left" Margin="300,120,0,0" VerticalAlignment="Top" Width="480" Height="60" Grid.ColumnSpan="2" FontSize="36"/>
-        
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical">
+                <Label x:Name="CurrentTimeLabel1" Content="現在時刻" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="300" Height="60" FontSize="36"/>
+                <Label x:Name="AppearDateLabel1" Content="次回の近日点予測" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="300" Height="60" FontSize="36"/>
+                <Label x:Name="TimeSpanLabel1" Content="予測日まであと" HorizontalAlignment="Left" Width="300" Height="60" VerticalAlignment="Top" FontSize="36"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Label x:Name="CurrentTimeLabel"  HorizontalAlignment="Left" Width="480" Height="60" VerticalAlignment="Top" Grid.ColumnSpan="2" FontSize="36"/>
+                <Label x:Name="AppearDateLabel" Content="The next date to appear"  HorizontalAlignment="Left" Width="480" Height="60" VerticalAlignment="Top" Grid.ColumnSpan="2" FontSize="36"/>
+                <Label x:Name="TimeSpanLabel" Content="" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="480" Height="60" Grid.ColumnSpan="2" FontSize="36"/>
+            </StackPanel>
+        </StackPanel>
+
     </Grid>
 </Window>
