@@ -6,6 +6,14 @@
         xmlns:local="clr-namespace:WpfApp8"
         mc:Ignorable="d"
         Title="MainWindow" Height="210" Width="790" ResizeMode="NoResize">
+    <Window.Resources>
+        <SolidColorBrush x:Key="BackgroundColor" Color="Black"/>
+        <SolidColorBrush x:Key="ForegroundColor" Color="White"/>
+        <Style TargetType="Label">
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="300"/>
@@ -16,11 +24,17 @@
             <RowDefinition Height="60"/>
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
-        <Label x:Name="CurrentTimeLabel1" Grid.Column="0" Grid.Row="0" Content="現在時刻" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="300" Height="60" FontSize="36"/>
-        <Label x:Name="AppearDateLabel1" Grid.Column="0" Grid.Row="1"  Content="次回の近日点予測" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="300" Height="60" FontSize="36"/>
-        <Label x:Name="TimeSpanLabel1" Grid.Column="0" Grid.Row="2"  Content="予測日まであと" HorizontalAlignment="Left" Width="300" Height="60" VerticalAlignment="Top" FontSize="36"/>
-        <Label x:Name="CurrentTimeLabel" Grid.Column="1" Grid.Row="0"  HorizontalAlignment="Left" Width="480" Height="60" VerticalAlignment="Top" Grid.ColumnSpan="2" FontSize="36"/>
-        <Label x:Name="AppearDateLabel" Grid.Column="1" Grid.Row="1" Content="The next date to appear"  HorizontalAlignment="Left" Width="480" Height="60" VerticalAlignment="Top" Grid.ColumnSpan="2" FontSize="36"/>
-        <Label x:Name="TimeSpanLabel" Grid.Column="1" Grid.Row="2" Content="" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="480" Height="60" Grid.ColumnSpan="2" FontSize="36"/>
+        <Label Grid.Column="0" Grid.Row="0" x:Name="CurrentTimeLabel1" 
+               Content="現在時刻" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="300" Height="60" FontSize="36"/>
+        <Label Grid.Column="0" Grid.Row="1" x:Name="AppearDateLabel1" 
+               Content="次回の近日点予測" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="300" Height="60" FontSize="36"/>
+        <Label Grid.Column="0" Grid.Row="2" x:Name="TimeSpanLabel1"
+               Content="予測日まであと" HorizontalAlignment="Left" Width="300" Height="60" VerticalAlignment="Top" FontSize="36"/>
+        <Label Grid.Column="1" Grid.Row="0" x:Name="CurrentTimeLabel"
+               HorizontalAlignment="Left" Width="480" Height="60" VerticalAlignment="Top" Grid.ColumnSpan="2" FontSize="36"/>
+        <Label Grid.Column="1" Grid.Row="1" x:Name="AppearDateLabel" 
+               Content="The next date to appear"  HorizontalAlignment="Left" Width="480" Height="60" VerticalAlignment="Top" Grid.ColumnSpan="2" FontSize="36"/>
+        <Label Grid.Column="1" Grid.Row="2" x:Name="TimeSpanLabel"
+               Content="" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="480" Height="60" Grid.ColumnSpan="2" FontSize="36"/>
     </Grid>
 </Window>
